@@ -14,6 +14,18 @@ Intercepts Claude Code API calls and compresses messages before sending to Anthr
 - **Zero modification** to Claude Code binary
 - **Fully reversible** - disable anytime
 
+---
+
+## 💡 **PRO TIP: Save Even MORE Tokens!**
+
+**Don't waste tokens re-explaining context to an amnesiac Claude!**
+
+Use `claude --resume` to continue your previous conversation with full context intact. Claude Code automatically saves your conversation history - you don't need to re-explain your project, requirements, or previous work every time you start a new session.
+
+**This alone can save you 1,000-5,000+ tokens per session compared to starting fresh!**
+
+---
+
 ## How It Works
 
 ```
@@ -532,8 +544,7 @@ Real LoreToken technology is separately licensed under the Open Lore License (OL
 **Issues:** Report bugs or request features via GitHub issues
 
 **Contact:**
-- Apollo Raines: wavmeister@gmail.com
-- Phone: 832-592-7423
+- Apollo Raines: apollo@saiql.ai
 
 ## Links
 
