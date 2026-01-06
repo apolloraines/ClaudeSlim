@@ -1,0 +1,25 @@
+[Unit]
+Description=ClaudeSlim - Token Compression Proxy
+Documentation=https://github.com/apolloraines/claudeslim
+After=network.target
+
+[Service]
+Type=simple
+User=YOUR_USERNAME
+Group=YOUR_USERNAME
+WorkingDirectory=/home/YOUR_USERNAME
+ExecStart=/usr/bin/python3 /home/YOUR_USERNAME/compression_proxy.py
+Restart=on-failure
+RestartSec=5s
+StandardOutput=journal
+StandardError=journal
+
+# Security settings
+NoNewPrivileges=true
+PrivateTmp=true
+
+# Environment
+Environment="PYTHONUNBUFFERED=1"
+
+[Install]
+WantedBy=multi-user.target
