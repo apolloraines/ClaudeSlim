@@ -80,16 +80,13 @@ claude --version
 
 ### Super Easy Install (Let Claude Do It!)
 
-**You already have Claude Code installed, so just ask Claude to install ClaudeSlim for you:**
+**You already have Claude Code installed, so just ask Claude to install it:**
 
-```bash
-# In your Claude Code session, read the instructions file:
-cat Claude_Read_This.md
-
-# Then paste it to Claude and let Claude install everything automatically!
+```
+Clone the repo and tell Claude: "Install ClaudeSlim using the instructions in Claude_Read_This.md"
 ```
 
-Claude will:
+Claude will read the file and automatically:
 - Install the package
 - Set up systemd for auto-start on boot
 - Configure environment variables
