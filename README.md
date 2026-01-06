@@ -78,7 +78,26 @@ pip3 --version
 claude --version
 ```
 
-### Quick Install (Recommended)
+### Super Easy Install (Let Claude Do It!)
+
+**You already have Claude Code installed, so just ask Claude to install ClaudeSlim for you:**
+
+```bash
+# In your Claude Code session, read the instructions file:
+cat Claude_Read_This.md
+
+# Then paste it to Claude and let Claude install everything automatically!
+```
+
+Claude will:
+- Install the package
+- Set up systemd for auto-start on boot
+- Configure environment variables
+- Verify everything works
+
+Done in seconds! 🎯
+
+### Quick Install (Manual)
 
 **Fully automatic setup with systemd:**
 ```bash
