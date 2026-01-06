@@ -78,22 +78,35 @@ pip3 --version
 claude --version
 ```
 
-### Quick Install
+### Quick Install (Recommended)
+
+**Install from PyPI:**
+```bash
+# Install ClaudeSlim
+pip3 install claudeslim
+
+# Configure environment variable
+echo 'export ANTHROPIC_BASE_URL="http://localhost:8086"' >> ~/.bashrc
+source ~/.bashrc
+
+# Start the proxy
+claudeslim
+```
+
+That's it! The proxy will run on `localhost:8086` and automatically compress all Claude Code API calls.
+
+### Alternative: Install from Source
 
 ```bash
-# 1. Clone or download this repository
-cd /home/yourusername
+# 1. Clone the repository
 git clone https://github.com/apolloraines/claudeslim.git
 cd claudeslim
 
-# 2. Install dependencies
-pip3 install -r requirements.txt
-
-# 3. Run installation script
+# 2. Run installation script
 chmod +x install.sh
 ./install.sh
 
-# 4. Start a new terminal session
+# 3. Start a new terminal session
 # Compression is now active!
 ```
 
@@ -124,12 +137,17 @@ curl http://localhost:8086/health
 
 ### Start Compression Proxy
 
-**If using systemd (recommended):**
+**If installed via pip:**
+```bash
+claudeslim
+```
+
+**If using systemd service:**
 ```bash
 sudo systemctl start claudeslim
 ```
 
-**Manual start:**
+**If installed from source:**
 ```bash
 python3 ~/compression_proxy.py
 ```

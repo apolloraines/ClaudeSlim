@@ -16,7 +16,7 @@ import logging
 import sys
 from flask import Flask, request, Response, jsonify
 import requests
-from aggressive_compressor import aggressive_compress_message
+from claude_compressor import compress_message, get_stats
 
 # Configure logging
 logging.basicConfig(
@@ -134,7 +134,7 @@ def proxy_count_tokens():
                             content_type=response.headers.get('Content-Type'))
 
         # Compress and count
-        compressed = aggressive_compress_message(original_message, COMPRESSION_LEVEL)
+        compressed = compress_message(original_message)
 
         # Forward to Anthropic
         response = requests.post(
@@ -201,7 +201,7 @@ def proxy_messages():
 
         # Apply compression
         try:
-            compressed_message = aggressive_compress_message(original_message, COMPRESSION_LEVEL)
+            compressed_message = compress_message(original_message)
 
             # Calculate and log compression stats
             orig_size = len(json.dumps(original_message))
