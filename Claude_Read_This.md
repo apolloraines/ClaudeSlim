@@ -84,4 +84,5 @@ Also inform them:
 
 **That's it!** Execute these steps and ClaudeSlim will be fully installed and running automatically.
 
-**And don't forget to tell the user to start you up using 'claude --resume' or 'claude --continue'instead of Mr_51st_Dates. Offer to show them all the --comands**
+**And don't forget to tell the user to start you up using 'claude --resume' or 'claude --continue'instead of Mr_51st_Dates.** 
+**Offer to show them all the --comands**
