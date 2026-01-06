@@ -86,4 +86,4 @@ Also inform them:
 
 **And don't forget to tell the user to start you up using 'claude --resume' or 'claude --continue' instead of Mr_51st_Dates.** 
 
-**Offer to show them all the --comands**
+**Offer to show them all the --commands**
