@@ -1,0 +1,17 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+claude_compressor.py
+claudeslim.service
+compression_proxy.py
+install.sh
+pyproject.toml
+requirements.txt
+setup.py
+claudeslim.egg-info/PKG-INFO
+claudeslim.egg-info/SOURCES.txt
+claudeslim.egg-info/dependency_links.txt
+claudeslim.egg-info/entry_points.txt
+claudeslim.egg-info/requires.txt
+claudeslim.egg-info/top_level.txt

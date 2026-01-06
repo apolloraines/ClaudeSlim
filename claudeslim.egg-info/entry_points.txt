@@ -1,0 +1,2 @@
+[console_scripts]
+claudeslim = compression_proxy:main

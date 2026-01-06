@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claudeslim"
+version = "1.0.0"
+description = "Reduce Claude Code API token usage by 60-85% through intelligent compression"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Apollo Raines", email = "apollo@saiql.ai"}
+]
+keywords = ["claude", "anthropic", "api", "compression", "tokens", "cli", "proxy"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "flask>=2.0.0",
+    "requests>=2.25.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/apolloraines/claudeslim"
+Documentation = "https://github.com/apolloraines/claudeslim#readme"
+Repository = "https://github.com/apolloraines/claudeslim"
+"Bug Tracker" = "https://github.com/apolloraines/claudeslim/issues"
+
+[project.scripts]
+claudeslim = "compression_proxy:main"
