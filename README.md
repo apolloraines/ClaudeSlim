@@ -80,20 +80,41 @@ claude --version
 
 ### Quick Install (Recommended)
 
-**Install from PyPI:**
+**Fully automatic setup with systemd:**
 ```bash
-# Install ClaudeSlim
+# 1. Install ClaudeSlim
 pip3 install claudeslim
 
-# Configure environment variable
+# 2. Create systemd service
+sudo tee /etc/systemd/system/claudeslim.service > /dev/null <<EOF
+[Unit]
+Description=ClaudeSlim - Token Compression Proxy
+After=network.target
+
+[Service]
+Type=simple
+User=$USER
+ExecStart=$(which claudeslim)
+Restart=on-failure
+RestartSec=5s
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# 3. Enable and start service
+sudo systemctl daemon-reload
+sudo systemctl enable claudeslim
+sudo systemctl start claudeslim
+
+# 4. Configure environment variable
 echo 'export ANTHROPIC_BASE_URL="http://localhost:8086"' >> ~/.bashrc
 source ~/.bashrc
-
-# Start the proxy
-claudeslim
 ```
 
-That's it! The proxy will run on `localhost:8086` and automatically compress all Claude Code API calls.
+**That's it!** The proxy now runs automatically on boot. Just use `claude` normally - compression happens transparently.
 
 ### Alternative: Install from Source
 
